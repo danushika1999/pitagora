@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang=it>
+<head>
+<title>Teorema di pitagora</title>
+<link rel=stylesheet href=stile.css>
+<meta cherset=utf-8>
+<script>
+function inversa(){
+var c1 = document.forms.pitagora.c1.value;
+var c2 = document.forms.pitagora.c2.value;
+var q1=c1*c1;
+var q2=Math.pow(c2,2);
+var differenza=q1-q2;
+var ipotenusa=Math.sqrt(differenza);
+document.getElementById('risultato').innerHTML="Il cateto misura = "+ipotenusa+" cm ";
+}
+function cancella(){ 
+var calcolo = document.getElementById('risultato').innerHTML=" ";
+}
+ </script>
+<style>
+body {
+   background-image: url("sfondo1.jpg");
+    background-repeat: no-repeat;
+     background-size: cover;
+     }
+ 
+</style>
+</head>
+<body>
+	<div class=container>
+    <div class=row>
+<div class="twelve columns">
+<center><em><h1>Calcola l'Ipotenusa</h1>
+<p>Inserisci le misure dei catateti e premi "Calcola"</p>
+<p><a href=pitagoradanu.html>Calcola il cateto</a></p>
+<img src="https://i.ytimg.com/vi/K_R7325RArQ/hqdefault.jpg" border="5"  width="400" height="400"> 
+<form name=pitagora>
+<label for="c1">Misura del Ipotenuso</label><br>
+<input type=number min=0.01 step=0.01 placeholder="misura" name=c1 required><br>
+<label for="c2">Misura del cateto</label><br>
+<input type=number min=0.01 step=0.01 placeholder="misura" name=c2 required><br>
+<input type=reset value=Annulla>
+<input type=button onclick=inversa()  value=calcolo>
+</form>
+<p id=risultato>  </p></em>
+</center>
+    </div>
+</div>
+    </div>
+</body>
+</html>
